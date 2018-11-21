@@ -1,0 +1,50 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	      http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+    <display-name>Restful Web Application</display-name>
+
+    <servlet>
+        <servlet-name>jersey-serlvet</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>com.sun.jersey.config.property.packages</param-name>
+            <param-value>com.dgtz.web.api</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>jersey-serlvet</servlet-name>
+        <url-pattern>/api/*</url-pattern>
+    </servlet-mapping>
+
+    <!--<error-off>
+        &lt;!&ndash; Missing login &ndash;&gt;
+        <error-code>401</error-code>
+        <location>/api/contents/error/401</location>
+    </error-off>
+    <error-off>
+        &lt;!&ndash; Forbidden directory listing &ndash;&gt;
+        <error-code>403</error-code>
+        <location>/api/contents/error/403</location>
+    </error-off>
+    <error-off>
+        &lt;!&ndash; Uncaught exception &ndash;&gt;
+        <error-code>500</error-code>
+        <location>/api/contents/error/500</location>
+    </error-off>
+    <error-off>
+        &lt;!&ndash; Uncaught exception &ndash;&gt;
+        <error-code>404</error-code>
+        <location>/api/contents/error/404</location>
+    </error-off>
+    <error-off>
+        &lt;!&ndash; Unsupported servlet method &ndash;&gt;
+        <error-code>503</error-code>
+        <location>/api/contents/error/503</location>
+    </error-off>-->
+
+
+</web-app>
